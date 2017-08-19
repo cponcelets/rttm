@@ -2,7 +2,10 @@
 Relative Timed Trace Manager
 
 This software was developed in order to translate and compare relative timed traces.
-Synopsis: rttm <MODE> <options>
+Synopsis:
+```
+rttm <MODE> <options>
+```
 
 Two modes are available -T for translation and -V for Verification.
 (command ./rttm or ./rttm --help for more details).
