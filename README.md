@@ -7,8 +7,8 @@ Synopsis:
 rttm <MODE> <options>
 ```
 
-Two modes are available -T for translation and -V for Verification.
-(command ./rttm or ./rttm --help for more details).
+Two modes are available -T for translation and -V for Verification
+(try the command ./rttm or ./rttm --help for more details).
 
 -- --
 # Getting Started
