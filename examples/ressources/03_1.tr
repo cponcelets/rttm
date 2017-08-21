@@ -1,0 +1,1118 @@
+
+===== Trace #1===================================
+ edgeN<edgeid Proxy_0.s00_to_s01>  edgeN<edgeid Env_1.s00_to_s01>  edgeN<edgeid Proxy_0.s01_to_s02>  edgeN<edgeid Top_2.s00_to_s01>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s01_to_s02>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s02_to_s03>  edgeN<edgeid Proxy_0.s02_to_s03>  edgeN<edgeid Env_1.s01_to_s02>  edgeN<edgeid Top_2.s03_to_s04>  edgeN<edgeid Proxy_0.s03_to_s04>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Proxy_0.s04_to_s05>  edgeN<edgeid Env_1.s02_to_s03>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s04_to_s05>  edgeN<edgeid Proxy_0.s05_to_s06>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s05_to_s06>  edgeN<edgeid Top_2.s06_to_s07>  edgeN<edgeid Proxy_0.s06_to_s07>  edgeN<edgeid Env_1.s03_to_s04>  edgeN<edgeid Env_1.s03_to_s03>  edgeN<edgeid Top_2.s07_to_s08>  edgeN<edgeid Proxy_0.s07_to_s08>  edgeN<edgeid Env_1.s03_to_s03> 
+State:
+( Proxy_0.s00 Env_1.s00 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Env_1.s00->Env_1.s01 { t >= 0, e0!, t := 0 }
+  Proxy_0.s00->Proxy_0.s01 { 1, e0?, t := 0 }
+
+State:
+( Proxy_0.s01 Env_1.s01 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s01->Proxy_0.s02 { 1, Se0!, t := 0 }
+  Top_2.s00->Top_2.s01 { 1, Se0?, t := 0 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s01 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Top_2.s01->Top_2.s02 { 1, a0!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a0?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=50000 
+
+Transitions:
+  Top_2.s02->Top_2.s03 { t == 50000, a1!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a1?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=100000 Env_1.t=100000 Top_2.t=50000 
+
+Transitions:
+  Env_1.s01->Env_1.s02 { t >= 77000, e1!, t := 0 }
+  Proxy_0.s02->Proxy_0.s03 { 1, e1?, t := 0 }
+
+State:
+( Proxy_0.s03 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=50000 
+
+Transitions:
+  Proxy_0.s03->Proxy_0.s04 { 1, Se1!, t := 0 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=50000 
+
+Transitions:
+  Top_2.s03->Top_2.s04 { t == 50000, a2!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a2?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=25000 
+
+Transitions:
+  Top_2.s04->Top_2.s05 { t == 25000, a3!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a3?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=25000 
+
+Transitions:
+  Top_2.s05->Top_2.s06 { t == 25000, a4!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a4?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s06 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=0 
+
+Delay: 5750
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s06 )
+Proxy_0.t=55750 Env_1.t=55750 Top_2.t=5750 
+
+Transitions:
+  Env_1.s02->Env_1.s03 { t >= 38500, e2!, t := 0 }
+  Proxy_0.s04->Proxy_0.s05 { 1, e2?, t := 0 }
+
+State:
+( Proxy_0.s05 Env_1.s03 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=5750 
+
+Transitions:
+  Proxy_0.s05->Proxy_0.s06 { 1, Se2!, t := 0 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=5750 
+
+Delay: 4250
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s06 )
+Proxy_0.t=4250 Env_1.t=4250 Top_2.t=10000 
+
+Transitions:
+  Top_2.s06->Top_2.s07 { t == 10000, a5!, t := 0 }
+  Env_1.s03->Env_1.s03 { 1, a5?, 1 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s07 )
+Proxy_0.t=4250 Env_1.t=4250 Top_2.t=0 
+
+Delay: 15000
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s07 )
+Proxy_0.t=19250 Env_1.t=19250 Top_2.t=15000 
+
+Transitions:
+  Top_2.s07->Top_2.s08 { t == 15000, a6!, t := 0 }
+  Env_1.s03->Env_1.s03 { 1, a6?, 1 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s08 )
+Proxy_0.t=19250 Env_1.t=19250 Top_2.t=0 
+
+Transitions:
+  Env_1.s03->Env_1.s04 { t >= 19250, e3!, t := 0 }
+  Proxy_0.s06->Proxy_0.s07 { 1, e3?, t := 0 }
+
+State:
+( Proxy_0.s07 Env_1.s04 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s07->Proxy_0.s08 { 1, Se3!, t := 0 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+===== Trace #2===================================
+ edgeN<edgeid Proxy_0.s00_to_s01>  edgeN<edgeid Env_1.s00_to_s01>  edgeN<edgeid Proxy_0.s01_to_s02>  edgeN<edgeid Top_2.s00_to_s01>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s01_to_s02>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s02_to_s03>  edgeN<edgeid Proxy_0.s02_to_s03>  edgeN<edgeid Env_1.s01_to_s02>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s03_to_s04>  edgeN<edgeid Proxy_0.s03_to_s04>  edgeN<edgeid Proxy_0.s04_to_s05>  edgeN<edgeid Env_1.s02_to_s03>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s04_to_s05>  edgeN<edgeid Proxy_0.s05_to_s06>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s05_to_s06>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s06_to_s07>  edgeN<edgeid Proxy_0.s06_to_s07>  edgeN<edgeid Env_1.s03_to_s04>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s07_to_s08>  edgeN<edgeid Proxy_0.s07_to_s08> 
+State:
+( Proxy_0.s00 Env_1.s00 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Env_1.s00->Env_1.s01 { t >= 0, e0!, t := 0 }
+  Proxy_0.s00->Proxy_0.s01 { 1, e0?, t := 0 }
+
+State:
+( Proxy_0.s01 Env_1.s01 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s01->Proxy_0.s02 { 1, Se0!, t := 0 }
+  Top_2.s00->Top_2.s01 { 1, Se0?, t := 0 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s01 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Top_2.s01->Top_2.s02 { 1, a0!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a0?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=50000 
+
+Transitions:
+  Top_2.s02->Top_2.s03 { t == 50000, a1!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a1?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=100000 Env_1.t=100000 Top_2.t=50000 
+
+Transitions:
+  Top_2.s03->Top_2.s04 { t == 50000, a2!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a2?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s04 )
+Proxy_0.t=100000 Env_1.t=100000 Top_2.t=0 
+
+Delay: 23000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s04 )
+Proxy_0.t=123000 Env_1.t=123000 Top_2.t=23000 
+
+Transitions:
+  Env_1.s01->Env_1.s02 { t >= 77000, e1!, t := 0 }
+  Proxy_0.s02->Proxy_0.s03 { 1, e1?, t := 0 }
+
+State:
+( Proxy_0.s03 Env_1.s02 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=23000 
+
+Transitions:
+  Proxy_0.s03->Proxy_0.s04 { 1, Se1!, t := 0 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=23000 
+
+Delay: 2000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=2000 Env_1.t=2000 Top_2.t=25000 
+
+Transitions:
+  Top_2.s04->Top_2.s05 { t == 25000, a3!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a3?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=2000 Env_1.t=2000 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=27000 Env_1.t=27000 Top_2.t=25000 
+
+Transitions:
+  Top_2.s05->Top_2.s06 { t == 25000, a4!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a4?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s06 )
+Proxy_0.t=27000 Env_1.t=27000 Top_2.t=0 
+
+Delay: 10000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s06 )
+Proxy_0.t=37000 Env_1.t=37000 Top_2.t=10000 
+
+Transitions:
+  Top_2.s06->Top_2.s07 { t == 10000, a5!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a5?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s07 )
+Proxy_0.t=37000 Env_1.t=37000 Top_2.t=0 
+
+Delay: 15000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s07 )
+Proxy_0.t=52000 Env_1.t=52000 Top_2.t=15000 
+
+Transitions:
+  Top_2.s07->Top_2.s08 { t == 15000, a6!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a6?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s08 )
+Proxy_0.t=52000 Env_1.t=52000 Top_2.t=0 
+
+Transitions:
+  Env_1.s02->Env_1.s03 { t >= 38500, e2!, t := 0 }
+  Proxy_0.s04->Proxy_0.s05 { 1, e2?, t := 0 }
+
+State:
+( Proxy_0.s05 Env_1.s03 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s05->Proxy_0.s06 { 1, Se2!, t := 0 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 19250
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s08 )
+Proxy_0.t=19250 Env_1.t=19250 Top_2.t=19250 
+
+Transitions:
+  Env_1.s03->Env_1.s04 { t >= 19250, e3!, t := 0 }
+  Proxy_0.s06->Proxy_0.s07 { 1, e3?, t := 0 }
+
+State:
+( Proxy_0.s07 Env_1.s04 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=19250 
+
+Transitions:
+  Proxy_0.s07->Proxy_0.s08 { 1, Se3!, t := 0 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=19250 
+
+===== Trace #3===================================
+ edgeN<edgeid Proxy_0.s00_to_s01>  edgeN<edgeid Env_1.s00_to_s01>  edgeN<edgeid Proxy_0.s01_to_s02>  edgeN<edgeid Top_2.s00_to_s01>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s01_to_s02>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s02_to_s03>  edgeN<edgeid Proxy_0.s02_to_s03>  edgeN<edgeid Env_1.s01_to_s02>  edgeN<edgeid Top_2.s03_to_s04>  edgeN<edgeid Proxy_0.s03_to_s04>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Proxy_0.s04_to_s05>  edgeN<edgeid Env_1.s02_to_s03>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s04_to_s05>  edgeN<edgeid Proxy_0.s05_to_s06>  edgeN<edgeid Top_2.s05_to_s06>  edgeN<edgeid Env_1.s03_to_s03>  edgeN<edgeid Top_2.s06_to_s07>  edgeN<edgeid Proxy_0.s06_to_s07>  edgeN<edgeid Env_1.s03_to_s04>  edgeN<edgeid Top_2.s07_to_s08>  edgeN<edgeid Proxy_0.s07_to_s08>  edgeN<edgeid Env_1.s04_to_s04>  edgeN<edgeid Env_1.s04_to_s04>  edgeN<edgeid Env_1.s04_to_s04>  edgeN<edgeid Top_2.s08_to_s09> 
+State:
+( Proxy_0.s00 Env_1.s00 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Env_1.s00->Env_1.s01 { t >= 0, e0!, t := 0 }
+  Proxy_0.s00->Proxy_0.s01 { 1, e0?, t := 0 }
+
+State:
+( Proxy_0.s01 Env_1.s01 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s01->Proxy_0.s02 { 1, Se0!, t := 0 }
+  Top_2.s00->Top_2.s01 { 1, Se0?, t := 0 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s01 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Top_2.s01->Top_2.s02 { 1, a0!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a0?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=50000 
+
+Transitions:
+  Top_2.s02->Top_2.s03 { t == 50000, a1!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a1?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=100000 Env_1.t=100000 Top_2.t=50000 
+
+Transitions:
+  Env_1.s01->Env_1.s02 { t >= 77000, e1!, t := 0 }
+  Proxy_0.s02->Proxy_0.s03 { 1, e1?, t := 0 }
+
+State:
+( Proxy_0.s03 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=50000 
+
+Transitions:
+  Proxy_0.s03->Proxy_0.s04 { 1, Se1!, t := 0 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=50000 
+
+Transitions:
+  Top_2.s03->Top_2.s04 { t == 50000, a2!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a2?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=25000 
+
+Transitions:
+  Top_2.s04->Top_2.s05 { t == 25000, a3!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a3?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=0 
+
+Delay: 15750
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=40750 Env_1.t=40750 Top_2.t=15750 
+
+Transitions:
+  Env_1.s02->Env_1.s03 { t >= 38500, e2!, t := 0 }
+  Proxy_0.s04->Proxy_0.s05 { 1, e2?, t := 0 }
+
+State:
+( Proxy_0.s05 Env_1.s03 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=15750 
+
+Transitions:
+  Proxy_0.s05->Proxy_0.s06 { 1, Se2!, t := 0 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=15750 
+
+Delay: 9250
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=9250 Env_1.t=9250 Top_2.t=25000 
+
+Transitions:
+  Top_2.s05->Top_2.s06 { t == 25000, a4!, t := 0 }
+  Env_1.s03->Env_1.s03 { 1, a4?, 1 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s06 )
+Proxy_0.t=9250 Env_1.t=9250 Top_2.t=0 
+
+Delay: 10000
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s06 )
+Proxy_0.t=19250 Env_1.t=19250 Top_2.t=10000 
+
+Transitions:
+  Env_1.s03->Env_1.s04 { t >= 19250, e3!, t := 0 }
+  Proxy_0.s06->Proxy_0.s07 { 1, e3?, t := 0 }
+
+State:
+( Proxy_0.s07 Env_1.s04 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=10000 
+
+Transitions:
+  Proxy_0.s07->Proxy_0.s08 { 1, Se3!, t := 0 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=10000 
+
+Transitions:
+  Top_2.s06->Top_2.s07 { t == 10000, a5!, t := 0 }
+  Env_1.s04->Env_1.s04 { 1, a5?, 1 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s07 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 15000
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s07 )
+Proxy_0.t=15000 Env_1.t=15000 Top_2.t=15000 
+
+Transitions:
+  Top_2.s07->Top_2.s08 { t == 15000, a6!, t := 0 }
+  Env_1.s04->Env_1.s04 { 1, a6?, 1 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s08 )
+Proxy_0.t=15000 Env_1.t=15000 Top_2.t=0 
+
+Delay: 125000
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s08 )
+Proxy_0.t=140000 Env_1.t=140000 Top_2.t=125000 
+
+Transitions:
+  Top_2.s08->Top_2.s09 { t == 125000, a7!, t := 0 }
+  Env_1.s04->Env_1.s04 { 1, a7?, 1 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s09 )
+Proxy_0.t=140000 Env_1.t=140000 Top_2.t=0 
+
+===== Trace #4===================================
+ edgeN<edgeid Proxy_0.s00_to_s01>  edgeN<edgeid Env_1.s00_to_s01>  edgeN<edgeid Proxy_0.s01_to_s02>  edgeN<edgeid Top_2.s00_to_s01>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s01_to_s02>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s02_to_s03>  edgeN<edgeid Proxy_0.s02_to_s03>  edgeN<edgeid Env_1.s01_to_s02>  edgeN<edgeid Top_2.s03_to_s04>  edgeN<edgeid Proxy_0.s03_to_s04>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Proxy_0.s04_to_s05>  edgeN<edgeid Env_1.s02_to_s03>  edgeN<edgeid Top_2.s04_to_s05>  edgeN<edgeid Proxy_0.s05_to_s06>  edgeN<edgeid Env_1.s03_to_s03>  edgeN<edgeid Top_2.s05_to_s06>  edgeN<edgeid Top_2.s06_to_s07>  edgeN<edgeid Proxy_0.s06_to_s07>  edgeN<edgeid Env_1.s03_to_s04>  edgeN<edgeid Top_2.s07_to_s08>  edgeN<edgeid Proxy_0.s07_to_s08>  edgeN<edgeid Proxy_0.s08_to_s09>  edgeN<edgeid Env_1.s04_to_s05>  edgeN<edgeid Proxy_0.s09_to_s10>  edgeN<edgeid Env_1.s05_to_s05>  edgeN<edgeid Env_1.s05_to_s05>  edgeN<edgeid Env_1.s05_to_s05>  edgeN<edgeid Top_2.s08_to_s09>  edgeN<edgeid Env_1.s05_to_s05> 
+State:
+( Proxy_0.s00 Env_1.s00 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Env_1.s00->Env_1.s01 { t >= 0, e0!, t := 0 }
+  Proxy_0.s00->Proxy_0.s01 { 1, e0?, t := 0 }
+
+State:
+( Proxy_0.s01 Env_1.s01 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s01->Proxy_0.s02 { 1, Se0!, t := 0 }
+  Top_2.s00->Top_2.s01 { 1, Se0?, t := 0 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s01 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Top_2.s01->Top_2.s02 { 1, a0!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a0?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=50000 
+
+Transitions:
+  Top_2.s02->Top_2.s03 { t == 50000, a1!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a1?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=0 
+
+Delay: 36500
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=86500 Env_1.t=86500 Top_2.t=36500 
+
+Transitions:
+  Env_1.s01->Env_1.s02 { t >= 77000, e1!, t := 0 }
+  Proxy_0.s02->Proxy_0.s03 { 1, e1?, t := 0 }
+
+State:
+( Proxy_0.s03 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=36500 
+
+Transitions:
+  Proxy_0.s03->Proxy_0.s04 { 1, Se1!, t := 0 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=36500 
+
+Delay: 13500
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s03 )
+Proxy_0.t=13500 Env_1.t=13500 Top_2.t=50000 
+
+Transitions:
+  Top_2.s03->Top_2.s04 { t == 50000, a2!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a2?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=13500 Env_1.t=13500 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=38500 Env_1.t=38500 Top_2.t=25000 
+
+Transitions:
+  Env_1.s02->Env_1.s03 { t >= 38500, e2!, t := 0 }
+  Proxy_0.s04->Proxy_0.s05 { 1, e2?, t := 0 }
+
+State:
+( Proxy_0.s05 Env_1.s03 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Proxy_0.s05->Proxy_0.s06 { 1, Se2!, t := 0 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Top_2.s04->Top_2.s05 { t == 25000, a3!, t := 0 }
+  Env_1.s03->Env_1.s03 { 1, a3?, 1 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=25000 
+
+Transitions:
+  Env_1.s03->Env_1.s04 { t >= 19250, e3!, t := 0 }
+  Proxy_0.s06->Proxy_0.s07 { 1, e3?, t := 0 }
+
+State:
+( Proxy_0.s07 Env_1.s04 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Proxy_0.s07->Proxy_0.s08 { 1, Se3!, t := 0 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Env_1.s04->Env_1.s05 { t >= 0, e4!, t := 0 }
+  Proxy_0.s08->Proxy_0.s09 { 1, e4?, t := 0 }
+
+State:
+( Proxy_0.s09 Env_1.s05 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Proxy_0.s09->Proxy_0.s10 { 1, Se4!, t := 0 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Top_2.s05->Top_2.s06 { t == 25000, a4!, t := 0 }
+  Env_1.s05->Env_1.s05 { 1, a4?, 1 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 10000
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s06 )
+Proxy_0.t=10000 Env_1.t=10000 Top_2.t=10000 
+
+Transitions:
+  Top_2.s06->Top_2.s07 { t == 10000, a5!, t := 0 }
+  Env_1.s05->Env_1.s05 { 1, a5?, 1 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s07 )
+Proxy_0.t=10000 Env_1.t=10000 Top_2.t=0 
+
+Delay: 15000
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s07 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=15000 
+
+Transitions:
+  Top_2.s07->Top_2.s08 { t == 15000, a6!, t := 0 }
+  Env_1.s05->Env_1.s05 { 1, a6?, 1 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s08 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=0 
+
+Delay: 125000
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s08 )
+Proxy_0.t=150000 Env_1.t=150000 Top_2.t=125000 
+
+Transitions:
+  Top_2.s08->Top_2.s09 { t == 125000, a7!, t := 0 }
+  Env_1.s05->Env_1.s05 { 1, a7?, 1 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s09 )
+Proxy_0.t=150000 Env_1.t=150000 Top_2.t=0 
+
+===== Trace #5===================================
+ edgeN<edgeid Proxy_0.s00_to_s01>  edgeN<edgeid Env_1.s00_to_s01>  edgeN<edgeid Proxy_0.s01_to_s02>  edgeN<edgeid Top_2.s00_to_s01>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s01_to_s02>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s02_to_s03>  edgeN<edgeid Proxy_0.s02_to_s03>  edgeN<edgeid Env_1.s01_to_s02>  edgeN<edgeid Top_2.s03_to_s04>  edgeN<edgeid Proxy_0.s03_to_s04>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Proxy_0.s04_to_s05>  edgeN<edgeid Env_1.s02_to_s03>  edgeN<edgeid Top_2.s04_to_s05>  edgeN<edgeid Proxy_0.s05_to_s06>  edgeN<edgeid Env_1.s03_to_s03>  edgeN<edgeid Top_2.s05_to_s06>  edgeN<edgeid Top_2.s06_to_s07>  edgeN<edgeid Proxy_0.s06_to_s07>  edgeN<edgeid Env_1.s03_to_s04>  edgeN<edgeid Top_2.s07_to_s08>  edgeN<edgeid Proxy_0.s07_to_s08>  edgeN<edgeid Proxy_0.s08_to_s09>  edgeN<edgeid Env_1.s04_to_s05>  edgeN<edgeid Env_1.s04_to_s04>  edgeN<edgeid Proxy_0.s09_to_s10>  edgeN<edgeid Env_1.s04_to_s04>  edgeN<edgeid Env_1.s05_to_s05>  edgeN<edgeid Top_2.s08_to_s09>  edgeN<edgeid Env_1.s05_to_s05> 
+State:
+( Proxy_0.s00 Env_1.s00 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Env_1.s00->Env_1.s01 { t >= 0, e0!, t := 0 }
+  Proxy_0.s00->Proxy_0.s01 { 1, e0?, t := 0 }
+
+State:
+( Proxy_0.s01 Env_1.s01 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s01->Proxy_0.s02 { 1, Se0!, t := 0 }
+  Top_2.s00->Top_2.s01 { 1, Se0?, t := 0 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s01 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Top_2.s01->Top_2.s02 { 1, a0!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a0?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=50000 
+
+Transitions:
+  Top_2.s02->Top_2.s03 { t == 50000, a1!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a1?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=0 
+
+Delay: 36500
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=86500 Env_1.t=86500 Top_2.t=36500 
+
+Transitions:
+  Env_1.s01->Env_1.s02 { t >= 77000, e1!, t := 0 }
+  Proxy_0.s02->Proxy_0.s03 { 1, e1?, t := 0 }
+
+State:
+( Proxy_0.s03 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=36500 
+
+Transitions:
+  Proxy_0.s03->Proxy_0.s04 { 1, Se1!, t := 0 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=36500 
+
+Delay: 13500
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s03 )
+Proxy_0.t=13500 Env_1.t=13500 Top_2.t=50000 
+
+Transitions:
+  Top_2.s03->Top_2.s04 { t == 50000, a2!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a2?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=13500 Env_1.t=13500 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=38500 Env_1.t=38500 Top_2.t=25000 
+
+Transitions:
+  Env_1.s02->Env_1.s03 { t >= 38500, e2!, t := 0 }
+  Proxy_0.s04->Proxy_0.s05 { 1, e2?, t := 0 }
+
+State:
+( Proxy_0.s05 Env_1.s03 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Proxy_0.s05->Proxy_0.s06 { 1, Se2!, t := 0 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Top_2.s04->Top_2.s05 { t == 25000, a3!, t := 0 }
+  Env_1.s03->Env_1.s03 { 1, a3?, 1 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=25000 
+
+Transitions:
+  Env_1.s03->Env_1.s04 { t >= 19250, e3!, t := 0 }
+  Proxy_0.s06->Proxy_0.s07 { 1, e3?, t := 0 }
+
+State:
+( Proxy_0.s07 Env_1.s04 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Proxy_0.s07->Proxy_0.s08 { 1, Se3!, t := 0 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=25000 
+
+Transitions:
+  Top_2.s05->Top_2.s06 { t == 25000, a4!, t := 0 }
+  Env_1.s04->Env_1.s04 { 1, a4?, 1 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 10000
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s06 )
+Proxy_0.t=10000 Env_1.t=10000 Top_2.t=10000 
+
+Transitions:
+  Top_2.s06->Top_2.s07 { t == 10000, a5!, t := 0 }
+  Env_1.s04->Env_1.s04 { 1, a5?, 1 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s07 )
+Proxy_0.t=10000 Env_1.t=10000 Top_2.t=0 
+
+Delay: 15000
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s07 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=15000 
+
+Transitions:
+  Env_1.s04->Env_1.s05 { t >= 0, e4!, t := 0 }
+  Proxy_0.s08->Proxy_0.s09 { 1, e4?, t := 0 }
+
+State:
+( Proxy_0.s09 Env_1.s05 Top_2.s07 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=15000 
+
+Transitions:
+  Proxy_0.s09->Proxy_0.s10 { 1, Se4!, t := 0 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s07 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=15000 
+
+Transitions:
+  Top_2.s07->Top_2.s08 { t == 15000, a6!, t := 0 }
+  Env_1.s05->Env_1.s05 { 1, a6?, 1 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 125000
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s08 )
+Proxy_0.t=125000 Env_1.t=125000 Top_2.t=125000 
+
+Transitions:
+  Top_2.s08->Top_2.s09 { t == 125000, a7!, t := 0 }
+  Env_1.s05->Env_1.s05 { 1, a7?, 1 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s09 )
+Proxy_0.t=125000 Env_1.t=125000 Top_2.t=0 
+
+===== Trace #6===================================
+ edgeN<edgeid Proxy_0.s00_to_s01>  edgeN<edgeid Env_1.s00_to_s01>  edgeN<edgeid Proxy_0.s01_to_s02>  edgeN<edgeid Top_2.s00_to_s01>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s01_to_s02>  edgeN<edgeid Env_1.s01_to_s01>  edgeN<edgeid Top_2.s02_to_s03>  edgeN<edgeid Proxy_0.s02_to_s03>  edgeN<edgeid Env_1.s01_to_s02>  edgeN<edgeid Top_2.s03_to_s04>  edgeN<edgeid Proxy_0.s03_to_s04>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Proxy_0.s04_to_s05>  edgeN<edgeid Env_1.s02_to_s03>  edgeN<edgeid Env_1.s02_to_s02>  edgeN<edgeid Top_2.s04_to_s05>  edgeN<edgeid Proxy_0.s05_to_s06>  edgeN<edgeid Top_2.s05_to_s06>  edgeN<edgeid Env_1.s03_to_s03>  edgeN<edgeid Top_2.s06_to_s07>  edgeN<edgeid Proxy_0.s06_to_s07>  edgeN<edgeid Env_1.s03_to_s04>  edgeN<edgeid Top_2.s07_to_s08>  edgeN<edgeid Proxy_0.s07_to_s08>  edgeN<edgeid Proxy_0.s08_to_s09>  edgeN<edgeid Env_1.s04_to_s05>  edgeN<edgeid Proxy_0.s09_to_s10>  edgeN<edgeid Env_1.s04_to_s04>  edgeN<edgeid Env_1.s04_to_s04>  edgeN<edgeid Top_2.s08_to_s09>  edgeN<edgeid Env_1.s05_to_s05>  edgeN<edgeid Proxy_0.s10_to_s11>  edgeN<edgeid Env_1.s05_to_s06>  edgeN<edgeid Proxy_0.s11_to_s12> 
+State:
+( Proxy_0.s00 Env_1.s00 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Env_1.s00->Env_1.s01 { t >= 0, e0!, t := 0 }
+  Proxy_0.s00->Proxy_0.s01 { 1, e0?, t := 0 }
+
+State:
+( Proxy_0.s01 Env_1.s01 Top_2.s00 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s01->Proxy_0.s02 { 1, Se0!, t := 0 }
+  Top_2.s00->Top_2.s01 { 1, Se0?, t := 0 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s01 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Top_2.s01->Top_2.s02 { 1, a0!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a0?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s02 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=50000 
+
+Transitions:
+  Top_2.s02->Top_2.s03 { t == 50000, a1!, t := 0 }
+  Env_1.s01->Env_1.s01 { 1, a1?, 1 }
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=50000 Env_1.t=50000 Top_2.t=0 
+
+Delay: 50000
+
+State:
+( Proxy_0.s02 Env_1.s01 Top_2.s03 )
+Proxy_0.t=100000 Env_1.t=100000 Top_2.t=50000 
+
+Transitions:
+  Env_1.s01->Env_1.s02 { t >= 77000, e1!, t := 0 }
+  Proxy_0.s02->Proxy_0.s03 { 1, e1?, t := 0 }
+
+State:
+( Proxy_0.s03 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=50000 
+
+Transitions:
+  Proxy_0.s03->Proxy_0.s04 { 1, Se1!, t := 0 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s03 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=50000 
+
+Transitions:
+  Top_2.s03->Top_2.s04 { t == 50000, a2!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a2?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 25000
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s04 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=25000 
+
+Transitions:
+  Top_2.s04->Top_2.s05 { t == 25000, a3!, t := 0 }
+  Env_1.s02->Env_1.s02 { 1, a3?, 1 }
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=25000 Env_1.t=25000 Top_2.t=0 
+
+Delay: 15750
+
+State:
+( Proxy_0.s04 Env_1.s02 Top_2.s05 )
+Proxy_0.t=40750 Env_1.t=40750 Top_2.t=15750 
+
+Transitions:
+  Env_1.s02->Env_1.s03 { t >= 38500, e2!, t := 0 }
+  Proxy_0.s04->Proxy_0.s05 { 1, e2?, t := 0 }
+
+State:
+( Proxy_0.s05 Env_1.s03 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=15750 
+
+Transitions:
+  Proxy_0.s05->Proxy_0.s06 { 1, Se2!, t := 0 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=15750 
+
+Delay: 9250
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s05 )
+Proxy_0.t=9250 Env_1.t=9250 Top_2.t=25000 
+
+Transitions:
+  Top_2.s05->Top_2.s06 { t == 25000, a4!, t := 0 }
+  Env_1.s03->Env_1.s03 { 1, a4?, 1 }
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s06 )
+Proxy_0.t=9250 Env_1.t=9250 Top_2.t=0 
+
+Delay: 10000
+
+State:
+( Proxy_0.s06 Env_1.s03 Top_2.s06 )
+Proxy_0.t=19250 Env_1.t=19250 Top_2.t=10000 
+
+Transitions:
+  Env_1.s03->Env_1.s04 { t >= 19250, e3!, t := 0 }
+  Proxy_0.s06->Proxy_0.s07 { 1, e3?, t := 0 }
+
+State:
+( Proxy_0.s07 Env_1.s04 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=10000 
+
+Transitions:
+  Proxy_0.s07->Proxy_0.s08 { 1, Se3!, t := 0 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s06 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=10000 
+
+Transitions:
+  Top_2.s06->Top_2.s07 { t == 10000, a5!, t := 0 }
+  Env_1.s04->Env_1.s04 { 1, a5?, 1 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s07 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 15000
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s07 )
+Proxy_0.t=15000 Env_1.t=15000 Top_2.t=15000 
+
+Transitions:
+  Top_2.s07->Top_2.s08 { t == 15000, a6!, t := 0 }
+  Env_1.s04->Env_1.s04 { 1, a6?, 1 }
+
+State:
+( Proxy_0.s08 Env_1.s04 Top_2.s08 )
+Proxy_0.t=15000 Env_1.t=15000 Top_2.t=0 
+
+Transitions:
+  Env_1.s04->Env_1.s05 { t >= 0, e4!, t := 0 }
+  Proxy_0.s08->Proxy_0.s09 { 1, e4?, t := 0 }
+
+State:
+( Proxy_0.s09 Env_1.s05 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Transitions:
+  Proxy_0.s09->Proxy_0.s10 { 1, Se4!, t := 0 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s08 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=0 
+
+Delay: 125000
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s08 )
+Proxy_0.t=125000 Env_1.t=125000 Top_2.t=125000 
+
+Transitions:
+  Top_2.s08->Top_2.s09 { t == 125000, a7!, t := 0 }
+  Env_1.s05->Env_1.s05 { 1, a7?, 1 }
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s09 )
+Proxy_0.t=125000 Env_1.t=125000 Top_2.t=0 
+
+Delay: 48250
+
+State:
+( Proxy_0.s10 Env_1.s05 Top_2.s09 )
+Proxy_0.t=173250 Env_1.t=173250 Top_2.t=48250 
+
+Transitions:
+  Env_1.s05->Env_1.s06 { t >= 173250, e5!, t := 0 }
+  Proxy_0.s10->Proxy_0.s11 { 1, e5?, t := 0 }
+
+State:
+( Proxy_0.s11 Env_1.s06 Top_2.s09 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=48250 
+
+Transitions:
+  Proxy_0.s11->Proxy_0.s12 { 1, Se5!, t := 0 }
+
+State:
+( Proxy_0.s12 Env_1.s06 Top_2.s09 )
+Proxy_0.t=0 Env_1.t=0 Top_2.t=48250 

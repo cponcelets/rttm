@@ -1,0 +1,19 @@
+
+    // Input trace generated from trace_offline_manager 1 
+    // This trace can be Relative or Absolute (Instantiated with a tempo curve)
+    // -------------------------------------------------------------------
+
+1 0 60 " note1 " 
+
+
+2 1 132 " note2_1.00 " 
+
+
+3 1.5575 95.4 " note3_1.50 " 
+
+
+4 1.75 104.333 " note4_1.75 " 
+
+
+	//	End of trace 
+

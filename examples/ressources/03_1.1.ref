@@ -1,0 +1,18 @@
+
+    	// Expected trace generated from offline_trace_manager
+    	// the tempo will be found on the Antescofo output trace and HAS TO BE THE SAME if present here
+    	// We timestamped the beat position of events and actions since the begining of the test in BEAT
+    
+START of traces
+
+EVENT e0 0 60
+	0 a0
+	0.5 a1
+EVENT e1 1 132
+	1 a2
+	1.25 a3
+	1.5 a4
+EVENT e2 1.5575 95.4
+	1.6 a5
+	1.75 a6
+EVENT e3 1.75 104.333
