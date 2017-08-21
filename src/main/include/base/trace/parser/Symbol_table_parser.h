@@ -36,8 +36,8 @@ public:
     /**
       @param[in] file, filename of the symbol table (.symbol_table)
     **/
-    Symbol_table_parser(const string file);
-    ~Symbol_table_parser() {_symbol_table_file.close();}
+    Symbol_table_parser(const char* f);
+    ~Symbol_table_parser() {_symbol_table_stream->close();}
 
   //Public methods
     /** Used for the trace generation (MODE T)
@@ -110,8 +110,8 @@ private:
     map<string, Symbol_rel*> _unexpected_symbols; //in real but no in ref (keys Model Lab)
 
     // Other fields
-    ifstream _symbol_table_file;  //filename of symbol table
-    set<string> symbols_label;    //set of symbols used to check doublon
+    ifstream*   _symbol_table_stream;   //istream of symbol table
+    set<string> symbols_label;          //set of symbols used to check doublon
 
     bool is_event_read;           //boolean [used?]
     long _cuenum;                 //cuenum  [used?]

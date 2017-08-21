@@ -303,6 +303,7 @@ int run_translation()
 
     delete table;
     delete symbol_parser;
+
     return EXIT_SUCCESS;
 }
 
@@ -365,22 +366,20 @@ int run_verification()
 void flush_files()
 {
     //TODO add input trace file (curves)
-    if (input_file) delete input_file;
-
-    if(symboltable) delete symboltable;
-    if(pathname) delete pathname;
-
+    //if (input_file) delete input_file;
+    //if(symboltable) {delete symboltable;}
+    //if(pathname) delete pathname;
     //Mode T
     if(f_tran)
     {
-        delete scorename;
-        delete uppaaltrace;
+    //    delete scorename;
+    //    delete uppaaltrace;
     }
 
     //Mode V
     if(f_verif)
     {
-        delete reftrace;
-        delete realtrace;
+    //    delete reftrace;
+    //    delete realtrace;
     }
 }

@@ -8,29 +8,28 @@
 
 #include <base/trace/parser/Symbol_table_parser.h>
 
-Symbol_table_parser::Symbol_table_parser(const string f):
-    _symbol_table_file(f.c_str(), std::ios::in), symbols_label()
-{
-    if (!_symbol_table_file)
+Symbol_table_parser::Symbol_table_parser(const char* f):
+    symbols_label()
     {
-            std::cerr << "Erreur lors de l'ouverture du fichier " << f << std::endl;
-            exit(1);
+      _symbol_table_stream = new ifstream(f, std::ios::in);
+      if (!_symbol_table_stream)
+      {
+              std::cerr << "Erreur lors de l'ouverture du fichier " << f << std::endl;
+              exit(1);
+      }
     }
-}
 
 map <string, Symbol_phy*>* Symbol_table_parser::create_table()
 {
     map <string, Symbol_phy*>* table = new map<string, Symbol_phy*>();
 
-
-    while(!_symbol_table_file.eof())
+    while(!_symbol_table_stream->eof())
     {
-
         pair<string, string>* current_label_symbol = NULL;
         while ( (!current_label_symbol))
         {
             current_label_symbol = get_current_symbols();
-            if(_symbol_table_file.eof()) return table;
+            if(_symbol_table_stream->eof())   return table;
         }
 
         if(symbols_label.find(current_label_symbol->first) != symbols_label.end())
@@ -65,6 +64,7 @@ map <string, Symbol_phy*>* Symbol_table_parser::create_table()
         }
 
     }
+
     return table;
 }
 
@@ -80,10 +80,10 @@ pair<string, string>* Symbol_table_parser::get_current_symbols()
     is_event_read = false;
     pair<string, string>* labels = NULL;
 
-    if (_symbol_table_file)
+    if (_symbol_table_stream)
     {
         char ligne[MAX_SIZE];
-        if(!_symbol_table_file.getline(ligne, MAX_SIZE)) return NULL;
+        if(!_symbol_table_stream->getline(ligne, MAX_SIZE)) return NULL;
 
         int n = 0;
         char* pointer_ligne = ligne;
@@ -148,7 +148,7 @@ void Symbol_table_parser::link_events(Trace* ref, Trace* real)
         while ( (!current_label_symbol))
         {
             current_label_symbol = get_current_symbols();
-            if(_symbol_table_file.eof()) assert(false); //unknown symbols
+            if(_symbol_table_stream->eof()) assert(false); //unknown symbols
         }
 
         //compare current traces' symbols
@@ -211,7 +211,7 @@ void Symbol_table_parser::link_actions(Trace* ref, Trace* real)
         while ( (is_event_read) || (!current_label_symbol))
         {
             current_label_symbol = get_current_symbols();
-            if(_symbol_table_file.eof())
+            if(_symbol_table_stream->eof())
             {
                 secondPass(ref, symbol_ref, real, symbol_real);
                 return;
