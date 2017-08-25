@@ -37,32 +37,33 @@ void error(const char *fmt, ...)
 void usage(ostream &out)
 {
     out << endl
-    << "Usage : timedtracechecker -(V|T) ..." << endl
-    << "  [mode] Other options depend of the mode" << endl
-    << "  For Translation: Uppaal-trace, score and table are needed" << endl
-    << "  For Verification: reference, the Antescofo output to test and the symbol table are needed" << endl
+    << "Usage : rttm -<mode> [-<options>]" << endl
+    << "  The <mode> is required, other options may depend of the choosen mode" << endl
+    << "  For Translation (-T): the Uppaal-trace and the score are needed" << endl
+    << "  For Verification (-V): the reference and the system's output (to test) are needed" << endl
     << endl;
 
     out << "Modes: " << endl
-    << " -T:  Translation, the trace (from Uppaal) will be translated according the options" << endl
+    << " -T:  Translation, the trace (from Uppaal) will be translated according to the options" << endl
     << " \n\t The T options are:" << endl
     << " --utrace(-u): The Uppaal relative trace to translate." << endl
     << " --score (-s): The mixed-score (the mixed-score corresponding to the tests) " << endl
-    << " --rel: do not apply a tempo curve on input traces (relative input and reference trace)" << endl
-    << " --treco: create an input trace that is a detected input trace (a result of recognition)"
+    << " --rel:        Do not apply a tempo curve on input traces (keep input and reference traces relative)" << endl
+    << " --treco:      Create an input trace that is a detected input trace (a recognition trace)"
 
-    << "\n -V:  Verification, timed conformance: test if the real trace (--totest) is conformed to the reference trace (--ref)" << endl
+    << "\n -V:  Verification, timed conformance: test if the real trace (--totest) is timely conformed to the reference trace (--ref)" << endl
     << " \n\t The V options are:" << endl
-    << " --ref (-r): Reference trace (or expected [in physical time])." << endl
-    << " --tempo: Checks tempo values too with time values."
-    << " --totest: The real Antescofo output trace which has to be conformed to the ref" << endl
+    << " --ref (-r):  The reference trace (or expected [in physical time])." << endl
+    << " --tempo:     Checks tempo values too."
+    << " --totest:    The system's output trace." << endl
 
     << " \n\t Similar options are:" << endl
-    << "    --table (-t): The symbols table that maps ref labels to Antescofo labels." << endl;
+    << "    --table (-t): The symbols table that maps reference's and system's labels." << endl;
+    << "    --path (-p):  A path prefix for the outputed files." << endl;
 
     out << "\nOthers options:" << endl
-    << " --version (-v) :   current version" << endl
-    << " --help (-h) :     print this help" << endl
+    << " --version (-v):   current version" << endl
+    << " --help (-h):      print this help" << endl
     << endl;
 }
 
